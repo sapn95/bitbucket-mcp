@@ -1,0 +1,40 @@
+{
+  "name": "bitbucket-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for Bitbucket Server / Data Center REST 1.0 — list and read pull requests, their activities and merge state, post and reply to comments, resolve tasks, toggle draft, and merge. Host and credentials come from the environment; no server URL is baked in.",
+  "type": "module",
+  "bin": {
+    "bitbucket-mcp": "index.js"
+  },
+  "main": "index.js",
+  "engines": {
+    "node": ">=20.19"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0"
+  },
+  "license": "MIT",
+  "author": "sapn95",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sapn95/bitbucket-mcp.git"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "lint": "eslint .",
+    "test": "node --test --test-concurrency=1 test/api.test.mjs test/safety.test.mjs",
+    "coverage": "c8 --reporter=text-summary --include=index.js --check-coverage --lines 85 --functions 85 --branches 75 node --test --test-concurrency=1 test/api.test.mjs test/safety.test.mjs",
+    "gate": "npm run lint && npm run coverage"
+  },
+  "files": [
+    "index.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "c8": "^12.0.0",
+    "eslint": "^10.8.0",
+    "globals": "^17.8.0"
+  }
+}
