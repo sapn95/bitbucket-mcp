@@ -1,10 +1,10 @@
 {
-  "name": "bitbucket-mcp",
+  "name": "bb-server-mcp",
   "version": "0.1.0",
   "description": "MCP server for Bitbucket Server / Data Center REST 1.0 — list and read pull requests, their activities and merge state, post and reply to comments, resolve tasks, toggle draft, and merge. Host and credentials come from the environment; no server URL is baked in.",
   "type": "module",
   "bin": {
-    "bitbucket-mcp": "index.js"
+    "bb-server-mcp": "index.js"
   },
   "main": "index.js",
   "engines": {
